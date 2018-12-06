@@ -638,3 +638,62 @@ func IsItemHoveredV(flags int) bool {
 func IsItemHovered() bool {
 	return IsItemHoveredV(HoveredFlagsDefault)
 }
+
+// Columns
+
+// ColumnsV sets a columns layout
+func ColumnsV(count int, id string, border bool) {
+	idStr, idRet := wrapString(id)
+	defer idRet()
+	C.iggColumns(C.int(count), idStr, castBool(border))
+}
+
+// Columns set the number of columns
+func Columns(count int) {
+	ColumnsV(count, "", true)
+}
+
+// NextColumn move to the next column
+func NextColumn() {
+	C.iggNextColumn()
+}
+
+// ColumnIndex Get the current column index
+func ColumnIndex() int {
+	return int(C.iggGetColumnIndex())
+}
+
+// ColumnWidth Get a column width
+func ColumnWidthV(index int) float32 {
+	return float32(C.iggGetColumnWidth(C.int(index)))
+}
+
+// ColumnWidth Get the current column width
+func ColumnWidth() float32 {
+	return ColumnWidthV(-1)
+}
+
+// Set the column width
+func SetColumnWidth(index int, value float32) {
+	C.iggSetColumnWidth(C.int(index), C.float(value))
+}
+
+// ColumnOffsetV Get the column offset for an index
+func ColumnOffsetV(index int) float32 {
+	return float32(C.iggGetColumnOffset(C.int(index)))
+}
+
+// ColumnOffset Get the current column offset
+func ColumnOffset() float32 {
+	return ColumnOffsetV(-1)
+}
+
+// SetColumnOffset Set the column offset
+func SetColumnOffset(index int, value float32) {
+	C.iggSetColumnOffset(C.int(index), C.float(value))
+}
+
+// ColumnsCount Get the number of columns
+func ColumnsCount() int {
+	return int(C.iggGetColumnsCount())
+}

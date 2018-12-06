@@ -407,3 +407,44 @@ IggBool iggIsItemHovered(int flags)
 {
    return ImGui::IsItemHovered(flags) ? 1 : 0;
 }
+
+
+void iggColumns(int count, char const *id, IggBool border)
+{
+   ImGui::Columns(count, id, border);
+}
+
+void iggNextColumn()
+{
+   ImGui::NextColumn();
+}
+
+int iggGetColumnIndex()
+{
+   return ImGui::GetColumnIndex();
+}
+
+float iggGetColumnWidth(int index)
+{
+   return ImGui::GetColumnWidth(index);
+}
+
+void iggSetColumnWidth(int index, float value)
+{
+   ImGui::SetColumnWidth(index, value);
+}
+
+float iggGetColumnOffset(int index)
+{
+   return ImGui::GetColumnOffset(index);
+}
+void iggSetColumnOffset(int index, float value)
+{
+   return ImGui::SetColumnOffset(index, value);
+}
+
+int iggGetColumnsCount()
+{
+   return ImGui::GetColumnsCount();
+}
+

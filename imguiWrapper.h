@@ -107,6 +107,15 @@ extern void iggCloseCurrentPopup(void);
 
 extern IggBool  iggIsItemHovered(int flags);
 
+extern void iggColumns(int count, char const *id, IggBool border);
+extern void iggNextColumn();
+extern int iggGetColumnIndex();
+extern float iggGetColumnWidth(int index);
+extern void iggSetColumnWidth(int index, float value);
+extern float iggGetColumnOffset(int index);
+extern void iggSetColumnOffset(int index, float value);
+extern int iggGetColumnsCount();
+
 #ifdef __cplusplus
 }
 #endif

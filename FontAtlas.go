@@ -98,8 +98,3 @@ func (atlas FontAtlas) TextureDataAlpha8() *Alpha8Image {
 func (atlas FontAtlas) SetTextureID(id TextureID) {
 	C.iggFontAtlasSetTextureID(atlas.handle(), id.handle())
 }
-
-// Build builds the font atlas
-func (atlas FontAtlas) Build() {
-	C.iggFontAtlasBuild(atlas.handle())
-}

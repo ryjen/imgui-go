@@ -697,3 +697,8 @@ func SetColumnOffset(index int, value float32) {
 func ColumnsCount() int {
 	return int(C.iggGetColumnsCount())
 }
+
+// GetContentRegionAvailWidth Get the width of the current content region
+func GetContentRegionAvailWidth() float32 {
+	return float32(C.iggGetContentRegionAvailWidth())
+}

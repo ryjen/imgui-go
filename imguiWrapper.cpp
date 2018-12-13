@@ -448,3 +448,9 @@ int iggGetColumnsCount()
    return ImGui::GetColumnsCount();
 }
 
+float iggGetContentRegionAvailWidth() 
+{
+   return ImGui::GetContentRegionAvailWidth();
+}
+
+

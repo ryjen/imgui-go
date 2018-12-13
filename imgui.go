@@ -702,3 +702,8 @@ func ColumnsCount() int {
 func GetContentRegionAvailWidth() float32 {
 	return float32(C.iggGetContentRegionAvailWidth())
 }
+
+// GetWindowWidth Get the width of the current window
+func GetWindowWidth() float32 {
+	return float32(C.iggGetWindowWidth())
+}

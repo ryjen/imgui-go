@@ -117,6 +117,7 @@ extern void iggSetColumnOffset(int index, float value);
 extern int iggGetColumnsCount();
 
 extern float iggGetContentRegionAvailWidth();
+extern float iggGetWindowWidth();
 
 #ifdef __cplusplus
 }

@@ -453,4 +453,9 @@ float iggGetContentRegionAvailWidth()
    return ImGui::GetContentRegionAvailWidth();
 }
 
+float iggGetWindowWidth()
+{
+   return ImGui::GetWindowWidth();
+}
+
 
